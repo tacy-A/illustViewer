@@ -1,0 +1,37 @@
+
+ <div class="wrapper">
+	 <header id="Header">
+		 <div class="head-contents">
+			 <h1>ilust viewer</h1>
+		 </div>
+   </header>
+	<div class="container">
+	  <div class="row">
+	    <ul class="image-box">
+	        <% @parsed_data.each_with_index do | pin, index | %>
+	          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+	          <li>
+	            <img src="<%= pin['image']['original']['url'] %>" class="img-responsive aligncenter  contain" data-toggle="modal" data-target="#image_Modal<%= "#{index}" %>" style="cursor:pointer"/>
+	          </li>
+	          </div>
+	         <% end %>
+	    </ul>
+
+	      <% @parsed_data.each_with_index do | modal_pin, index2 | %>
+	        <div class="modal fade" id="image_Modal<%= "#{index2}" %>" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
+	          <div class="modal-dialog modal-lg modalcenter">
+	            <div class="modal-content">
+	              <div class="modal-body  ">
+	                <img src="<%= modal_pin['image']['original']['url'] %>" class="img-responsive aligncenter cnterimg"/>
+	              </div>
+	              <div class="modal-img_footer">
+	                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+          <% end %>
+				</div>
+			</div>
+
+		</div>

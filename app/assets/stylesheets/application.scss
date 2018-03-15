@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ * require font-awesome
+ * require_tree .
+ * require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+html{
+background-color: rgba(0,0,0,0.8);
+}
+div.wrapper {
+  background-color: rgba(0,0,0,0.8);
+  outline: 2px solid rgba(44,44,44,3);
+}
+#Header .head-contents h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 3em;
+  font-family: "Open Sans", "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "MS P Gothic", "ＭＳ Ｐゴシック", Verdana, Arial, Osaka, sans-serif;
+  position: relative;
+  border-bottom: solid 3px #516ab6;
+  left: 30px;
+  color: #fff;
+}
+// div.row {
+//     outline: 2px solid rgba(44,44,44,3);
+// }
+ul.image-box li {
+    display: inline-block;
+    border: 1px solid rgb(255,255,255);
+}
+.contain {
+    object-fit: contain;
+    width: 340px;
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(44,44,44,0);
+}
+img.cnterimg {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+ /* modal表示時の縦位置 */
+ .modalcenter{ margin-bottom: 0px; }
+ /* modalフッターのテキスト位置 */
+ .modal-img_footer {
+     padding: 10px;
+     text-align: center;
+ }
+ @media (min-width: 1500px){
+.container {
+    width: 1500px;
+  }
+}
+@media (min-width: 1600px){
+.container {
+   width: 1600px;
+ }
+}
